@@ -14,5 +14,5 @@ async def create_ch(bot, message):
        if message.from_user.id == MY_ID:
          args = message.text.split(None, 1)
          title = args[1]
-         await bot.create_channel(title, 'nice')
+         await bot.create_channel(title, 'made with annabelle userbot')
          await message.edit(f"`successfully made a new channel {title}`")
