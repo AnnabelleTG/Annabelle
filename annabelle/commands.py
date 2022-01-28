@@ -1,4 +1,5 @@
-from pyrogram import Client, filters
+from pyrogram import Client
+from pyrogram import filters as vrn
 
 from config import BOT_TOKEN, API_ID, API_HASH, HANDLER
 
@@ -9,6 +10,8 @@ Annabelle = Client(
         session_name = SESSION_STRING
       )
 
-@Annabelle.on_message(filters.command('repo', HANDLER))
+@Annabelle.on_message(vrn.command('repo', HANDLER))
 async def repo(Client, message):
-     
+     message.edit("Hey, I am using Annabelle userbot"
+                  "Its easy and powerful. Deploy your own now"
+                  "https://github.com/Vaishnavofficial/Annabelle")
