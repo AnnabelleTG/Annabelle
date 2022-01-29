@@ -16,4 +16,5 @@ async def gban(Annabelle, message):
                  reason = args[1]
              else:
                  reason = None
+          G_BANS[message.reply_to_message.from_user.id] = reason if reason is not None else None
           message.edit(GBAN_TXT.format(message.reply_to_message.from_user.mention, None if reason is None else reason))
