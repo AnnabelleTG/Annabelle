@@ -1,5 +1,6 @@
 from config import MY_ID
 from annabelle.helper_funcs.admin_check import admin_check
+from annabelle.helper_funcs.strings import GBAN_TXT
 from annabelle.commands import Annabelle
 
 import logging
@@ -15,3 +16,4 @@ async def gban(Annabelle, message):
                  reason = args[1]
              else:
                  reason = None
+          message.edit(GBAN_TXT.format(message.reply_to_message.from_user.mention, None if reason is None else reason))
