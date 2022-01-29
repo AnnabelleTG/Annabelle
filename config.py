@@ -6,4 +6,4 @@ API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
 HANDLER = environ.get['HANDLER']
-MY_ID = environ.get['MY_ID']
+MY_ID = int(environ.get['MY_ID'])
