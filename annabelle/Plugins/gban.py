@@ -22,7 +22,7 @@ async def gban(Annabelle, message):
 @Annabelle.on_message(filters.new_chat_members & filters.group)
 async def gban_kodk(Annabelle, message):
      if message.from_user.id in G_BANS.keys():
-        member = await client.get_chat_member(chat_id=message.chat.id, user_id=message.from_user.id)
+        member = await client.get_chat_member(chat_id=message.chat.id, user_id=MY_ID)
         if member.can_delete_messages:
            await Annabelle.kick_chat_member()
            await message.edit(r"The recently joined user is globally banned. I have kicked him/her")
