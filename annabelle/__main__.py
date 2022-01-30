@@ -16,3 +16,5 @@ async def repo(Client, message):
      message.edit("Hey, I am using Annabelle userbot"
                   "Its easy and powerful. Deploy your own now"
                   "https://github.com/Vaishnavofficial/Annabelle")
+
+Annabelle.run()
