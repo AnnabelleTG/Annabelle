@@ -11,3 +11,16 @@ async def setemoji(Annabelle, message):
             
           else:
              await message.edit("`At least mention what to reply with!`")
+
+@Annabelle.on_message(vrn.command('alivepic', HANDLER))
+async def setpic(Annabelle, message):
+      if message.from_user.id == MY_ID:
+         args = message.text.split(None, 1)
+         if len(args) >= 2:
+            if args[1].endswith["jpg", "jpeg", "png"]:
+               ALIVE_IMG = args[1]
+               await message.edit(f"ALIVE_IMG has been set to {ALIVE_IMG}")
+            else:
+               await message.edit("`Available types are jpg, jpeg, png.`")
+        else:
+           await message.edit("`Set to what?`")
