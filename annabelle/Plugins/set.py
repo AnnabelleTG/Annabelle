@@ -17,8 +17,9 @@ async def setpic(Annabelle, message):
       if message.from_user.id == MY_ID:
          args = message.text.split(None, 1)
          if len(args) >= 2:
-            if args[1].endswith["jpg", "jpeg", "png"]:
-               ALIVE_IMG = args[1]
+            x = args[1]
+            if x.endswith["jpg", "jpeg", "png"]:
+               ALIVE_IMG = x
                await message.edit(f"ALIVE_IMG has been set to {ALIVE_IMG}")
             else:
                await message.edit("`Available types are jpg, jpeg, png.`")
