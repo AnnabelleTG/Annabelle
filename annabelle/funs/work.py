@@ -1,4 +1,4 @@
-from annabelle.commands import Annabelle
+from annabelle import Annabelle
 from pyrogram import filters as vrn
 from annabelle.helper_funcs.strings import WORK_TXT
 
