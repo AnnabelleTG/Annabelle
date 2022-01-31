@@ -36,3 +36,8 @@ Good morning
 │∩│ ▓ ║∩田│║▓田▓
 🌹🌷🌹🌷🌹🍃🌷🌹🌷🌹
 '''
+
+COVID_TXT = (
+  "Always wear mask",
+  "**SMS:** sanitize, mask, social-distancing",
+  "Wash your hands with soap for atleast 20sec
