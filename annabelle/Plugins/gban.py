@@ -23,6 +23,6 @@ async def gban(Annabelle, message):
                 reason = ""
         else:
             await message.edit("You didn't specify whom to gban")
-   else:
-     return
+    else:
+        return
                 
