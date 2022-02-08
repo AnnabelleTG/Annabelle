@@ -42,3 +42,14 @@ COVID_TXT = (
   "**SMS:** sanitize, mask, social-distancing",
   "Wash your hands with soap for atleast 20sec"
 )
+
+ALIVE_TXT = '''
+**ANNABELLE USERBOT**
+
+**{0}Language: [Python3](www.python.org)**
+**{0}Server: [Heroku](www.heroku.com)**
+**{0}Framework: Pyrogram asyncio**
+**{0}Database: [Mongodb](www.mongodb.com)
+**{0}Developers: [Team XD Botz](t.me/XD_Botz)**
+**{0}Repo: [Click Here](github.com/vaishnavofficial/annabelle)**
+'''
