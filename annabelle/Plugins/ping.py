@@ -1,11 +1,12 @@
+from config import HANDLER
 from time import time
 from time import sleep
 from pyrogram import filters as vrn
-from annabelle.__main__ import Annabelle
+from import Annabelle
 from pyrogram.types.messages_and_media import Message
 
 
-@Annabelle.on_message(vrn.command("ping","?") & vrn.group)
+@Annabelle.on_message(vrn.command("ping", HANDLER) & vrn.group)
 async def ping(bot:Annabelle,msg:Message):
     start = time()
     await msg.edit_text(text="**Ping ...")
