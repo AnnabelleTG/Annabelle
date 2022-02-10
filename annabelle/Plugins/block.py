@@ -1,5 +1,9 @@
-#https://github.com/vaishnavofficial/Annabelle
+# https://github.com/vaishnavofficial/Annabelle
+from userbot import Annabelle
+from pyrogram import filters as vrn
+from config import HANDLER
 
+@Annabelle.on_message(vrn.command('block', HANDLER)) 
 async def block(bot, message):
        if message.from_user.id == MY_ID:
          if message.reply_to_message:
@@ -12,6 +16,7 @@ async def block(bot, message):
            await bot.block_user(ban_name)
            await message.edit("Blocked that user")
 
+@Annabelle.on_message(vrn.command('unblock', HANDLER))
 async def unblock(bot, message):
     try:
       if message.from_user.id == MY_ID:
