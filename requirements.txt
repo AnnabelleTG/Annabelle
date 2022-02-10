@@ -8,4 +8,3 @@ wikipedia==1.4.0
 bs4
 imdbpy
 telegraph
-requests
