@@ -1,21 +1,21 @@
 import os
 import requests
 from requests.utils import requote_uri
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import filters as vrn
+from config import HANDLER
+from userbot import Annabelle
 
 
 API = "https://api.sumanjay.cf/covid/?country="
 
-@Annabelle.on_message(filters.command("covid"))
+@Annabelle.on_message(filters.command("covid", HANDLER))
 async def reply_info(client, message):
     query = message.text.split(None, 1)[1]
     reply_markup = BUTTONS
-    await message.reply_text(
+    await message.edit(
         text=covid_info(query),
         disable_web_page_preview=True,
         quote=True,
-        reply_markup=reply_markup
     )
 
 
@@ -49,11 +49,11 @@ def covid_info(country_name):
         return error
 
 
-@Annabelle.on_message(filters.command("corona"))
+@Annabelle.on_message(vrn.command("corona", HANDELR))
 async def covid(Annabelle, message):
     query = message.text.split(None, 1)[1]
     reply_markup = BUTTONS
-    await message.reply_text(
+    await message.edit(
         text=covid_info(query),
         disable_web_page_preview=True,
         quote=True
