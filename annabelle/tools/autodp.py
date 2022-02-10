@@ -1,6 +1,7 @@
+import asyncio
 from asyncio import sleep
 from config import MY_ID, HANDLER, AUTODP_DUMP
-from annabelle import Annabelle
+from userbot import Annabelle
 from pyrogram import filters as vrn
 
 import logging
@@ -26,6 +27,7 @@ while AUTODP is True:
    async for pro in Annabelle.get_message(AUTODP_DUMP):
      if pro.type == "photo":
         await Annabelle.set_profile_photo(photo=pro)
+        await asyncio.sleep(8400)
      else:
-        countinue
+        continue
    
