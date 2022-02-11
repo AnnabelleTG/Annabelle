@@ -2,7 +2,7 @@ from config import HANDLER
 from time import time
 from time import sleep
 from pyrogram import filters as vrn
-from import Annabelle
+from userbot import Annabelle
 from pyrogram.types.messages_and_media import Message
 
 
@@ -14,5 +14,5 @@ async def ping(bot:Annabelle,msg:Message):
     delay_time = ( stop - start ) * 1000
     ms = str(delay_time).split(".")[0]
     sleep(1) #can be removed
-    await edit_text(text=f"""**Pong !!**
+    await msg.edit_text(text=f"""**Pong !!**
 **__$__**  `{ms}`  **__ms__**""")
