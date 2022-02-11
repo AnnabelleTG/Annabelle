@@ -10,7 +10,7 @@ async def purge(bot:Client, msg:Message):
     user_id = msg.from_user.id
     try :
         start = msg.reply_to_message.message_id
-        admin = bot.get_chat_member(chat_id, user_id=user_id)
+        admin = await bot.get_chat_member(chat_id, user_id=user_id)
         admin_type = ["adminsistrator", "creator"]
         count = 0
         if admin.status == admin_type :
