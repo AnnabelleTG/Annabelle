@@ -4,14 +4,14 @@ from pyrogram import filters as vrn
 from userbot import Annabelle
 from pyrogram.types.messages_and_media import Message
 
-
+@Annabelle.on_message(vrn.command('purge', HANDLER) & filters.outgoing)
 async def purge(bot:Client, msg:Message):
     chat_id = msg.chat.id
     user_id = msg.from_user.id
     try :
         start = msg.reply_to_message.message_id
         admin = bot.get_chat_member(chat_id, user_id=user_id)
-        admin_type = ("adminsistrator", "creator")
+        admin_type = ["adminsistrator", "creator"]
         count = 0
         if admin.status == admin_type :
             await bot.send_message(chat_id, text="**Starting to delete messages !!**")
