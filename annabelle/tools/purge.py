@@ -14,7 +14,7 @@ async def purge(bot:Client, msg:Message):
         admin_type = ["adminsistrator", "creator"]
         count = 0
         if admin.status in admin_type :
-            await bot.send_message(chat_id, text="`Starting to delete messages !!`")
+            await msg.edit(chat_id, text="`Starting to delete messages !!`")
             for message in await bot.get_history(chat_id, offset_id=start, reverse=True) :
                 msg_id = message.message_id
                 await bot.delete_messages(chat_id, msg_id)
