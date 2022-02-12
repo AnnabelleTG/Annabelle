@@ -68,7 +68,7 @@ async def collect_afk_messages(_, message: Message):
                     f"Still busy: ```{AFK_REASON.upper()}```\n"
                     f"Try pinging a bit later.`"
                 )
-                await UserBot.send_message(
+                await Annabelle.send_message(
                     chat_id=GetChatID(message),
                     text=text,
                     reply_to_message_id=ReplyCheck(message),
