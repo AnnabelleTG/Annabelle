@@ -4,7 +4,7 @@ import humanize
 from pyrogram import Client as Annabelle
 from pyrogram import filters
 from pyrogram.types import Message
-
+from config import HNADLER
 from annabelle.helper_funcs.PyroHelp import GetChatID, ReplyCheck
 
 
@@ -77,7 +77,7 @@ async def collect_afk_messages(_, message: Message):
         CHAT_TYPE[GetChatID(message)] += 1
 
 
-@Annabelle.on_message(filters.command("afk", ".") & filters.me, group=3)
+@Annabelle.on_message(filters.command("afk", HANDLER) & filters.me, group=3)
 async def afk_set(_, message: Message):
     global AFK_REASON, AFK, AFK_TIME
 
@@ -96,7 +96,7 @@ async def afk_set(_, message: Message):
     await message.delete()
 
 
-@Annabelle.on_message(filters.command("afk", "!") & filters.me, group=3)
+@Annabelle.on_message(filters.command("afk", HANDLER) & filters.me, group=3)
 async def afk_unset(_, message: Message):
     global AFK, AFK_TIME, AFK_REASON, USERS, GROUPS
 
