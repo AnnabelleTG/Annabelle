@@ -4,12 +4,12 @@ from asyncio import sleep
 
 from pyrogram import filters
 from pyrogram.types import Message
-
+from config import HANDLER
 from pyrogram import Client as UserBot
 
 
 
-@UserBot.on_message(filters.me & filters.command(["q"], '.'))
+@UserBot.on_message(filters.me & filters.command(["q"], HANDLER))
 async def quotly(bot: UserBot, message: Message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")
