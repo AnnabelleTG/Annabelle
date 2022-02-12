@@ -11,3 +11,7 @@ def ReplyCheck(message:Message):
     reply_id = message.message_id
   
   return reply_id
+
+def GetChatID(message: Message):
+    """ Get the group id of the incoming message"""
+    return message.chat.id
