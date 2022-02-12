@@ -7,6 +7,6 @@
 Written in python based on pyrogram</b>
 
 <p>Annabelle is telegram's lightest, fastest and most secure userbot.<br> Annabelle is filled with<br>
-  * Admin tools<br>
-  * Funs<br>
-  * Private usage
+  <b>• Admin tools<br>
+  • Funs<br>
+  • Private usage</b>
