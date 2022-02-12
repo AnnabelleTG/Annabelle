@@ -3,7 +3,6 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from annabelle.helper_funcs.PyroHelp import ReplyCheck
-from annabelle.helper_funcs.help import add_command_help
 
 
 @Client.on_message(filters.command("spam", ".") & filters.me)
@@ -26,5 +25,4 @@ async def spam(bot, _, message: Message):
             await asyncio.sleep(0.20)
 
 
-# Command help section
-add_command_help("spam", [[".spam", "<spam_amount> <spam_text>"]])
+
