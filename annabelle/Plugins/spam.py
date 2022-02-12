@@ -1,11 +1,13 @@
 import asyncio
 
-from pyrogram import Client, filters
+from userbot import Annabelle
+from config import HANDLER
+from pyrogram import filters as vrn
 from pyrogram.types import Message
 from annabelle.helper_funcs.PyroHelp import ReplyCheck
 
 
-@Client.on_message(filters.command("spam", ".") & filters.me)
+@Client.on_message(vrn.command("spam", HANDLER) & vrn.me)
 async def spam(bot, _, message: Message):
     await message.delete()
 
