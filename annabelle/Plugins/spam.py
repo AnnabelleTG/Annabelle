@@ -7,8 +7,8 @@ from pyrogram.types import Message
 from annabelle.helper_funcs.PyroHelp import ReplyCheck
 
 
-@Client.on_message(vrn.command("spam", HANDLER) & vrn.me)
-async def spam(bot, _, message: Message):
+@Annabelle.on_message(vrn.command("spam", HANDLER) & vrn.me)
+async def spam(Annabelle, _, message: Message):
     await message.delete()
 
     times = message.command[1]
@@ -16,14 +16,14 @@ async def spam(bot, _, message: Message):
 
     if message.chat.type in ["supergroup", "group"]:
         for _ in range(int(times)):
-            await bot.send_message(
+            await Annabelle.send_message(
                 message.chat.id, to_spam, reply_to_message_id=ReplyCheck(message)
             )
             await asyncio.sleep(0.20)
 
     if message.chat.type == "private":
         for _ in range(int(times)):
-            await bot.send_message(message.chat.id, to_spam)
+            await Annabelle.send_message(message.chat.id, to_spam)
             await asyncio.sleep(0.20)
 
 
