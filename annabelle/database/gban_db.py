@@ -28,7 +28,7 @@ def un_gban(id):
 def chek_gban(id):
   x = gban_col.find_one(id)
   if x:
-    return True, reason if reason else None
+    return True
   else:
     return False
   
