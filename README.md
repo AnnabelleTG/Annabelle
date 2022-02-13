@@ -10,4 +10,22 @@ Written in python based on pyrogram</i>
 <p>Annabelle is telegram's lightest, fastest and most secure userbot.<br> Annabelle is filled with<br>
   <b>• Admin tools<br>
   • Funs<br>
-  • Private usage</b>
+  • Private usage</b><br>
+  <h3>disclaimer</h3>
+  <code>Copyright @AnnabelleTG
+  This repository and its files belongs to AnnabelleTG.<br> Usage of any files in this repo will be prosecuted.
+    <br>Only owners have the permission to kang the repo<br>
+  If you see a cloned repo(excluding forks) of our repo, please report that to us</code> 
+  
+  <h2>Deploy</h2>
+  <b>Help for deploying the userbot</b><br>
+  <br>
+  <code>
+    API_ID</code><b>:</b> API_ID from website or bot<br>
+  <code>API_HASH</code><b>:</b> API_HASH from site or bot<br>
+  <code>SESSION_STRING</code><b>:</b> pyrogram session string from bot or repos<br>
+  <code>DATABASE_NAME</code><b>:</b> Your MongoDB database name<br>
+  <code>DATABASE_URL</code><b>:</b> Your MONGODB url<br>
+  <code>HANDLER</code><b>:</b> The command prefix. eg . , <br>
+  <code>SUDO_USERS</code><b>:</b> ID of users who can use your bot's certain other than you<br>
+  <code>MY_ID</code><b>:</b> Your telegram ID
