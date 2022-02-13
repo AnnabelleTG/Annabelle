@@ -1,7 +1,7 @@
 import time
 from config import HANDLER
 from pyrogram import filters as vrn
-from ...userbot import Annabelle
+from userbot import Annabelle
 from pyrogram.types.messages_and_media import Message
 
 
