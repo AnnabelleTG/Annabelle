@@ -24,7 +24,7 @@
             "required": "True"
         },
         "DATABASE_NAME": {
-            "description": "Create a database from mongodb.com",
+            "description": "Your mongodb database name (use any name)",
             "required": "True"
         },
         "DATABASE_URL": {
@@ -32,12 +32,12 @@
             "required": "True"
         },
         "HANDLER": {
-            "description": "You can set your prefix",
+            "description": "You can set your prefix example : .,?+",
             "required": "True"
         },
         "SUDO_USERS": {
             "description": "ID of users who can use your bot's certain other than you",
-            "required": "True"
+            "required": "False"
         },
         "MY_ID": {
             "description": "Your telegram id",
