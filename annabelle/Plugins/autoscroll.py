@@ -5,7 +5,7 @@ CODE BY : [SAMINSUMESH](PAULWALKER_TG)
 
 """
 
-from pyrogram import Client as Annabelle
+from userbot import Annabelle
 from pyrogram import filters
 from pyrogram.types import Message
 from config import HNADLER
@@ -17,7 +17,7 @@ f = filters.chat([])
 
 @Annabelle.on_message(f)
 async def auto_read(bot, message: Message):
-    await bot.read_history(message.chat.id)
+    await Annabelle.read_history(message.chat.id)
     message.continue_propagation()
 
 
