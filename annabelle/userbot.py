@@ -22,7 +22,7 @@ class Annabelle(Client):
         super().__init__(
             name,
             config_file=config_file,
-            plugins=dict(root=f"{name}/plugins"),
+            plugins=dict(root=f"{name}/Plugins"),
             workdir="./",
             app_version=self.version
         )
