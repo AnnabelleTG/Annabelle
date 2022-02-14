@@ -24,7 +24,7 @@ def subtract_time(start, end):
 @Annabelle.on_message(
     ((filters.group & filters.mentioned) | filters.private) & ~filters.me & ~filters.service, group=3
 )
-async def collect_afk_messages(_, message: Message):
+async def collect_afk_messages(bot, message: Message):
     if AFK:
         last_seen = subtract_time(datetime.now(), AFK_TIME)
         is_group = True if message.chat.type in ["supergroup", "group"] else False
@@ -38,7 +38,7 @@ async def collect_afk_messages(_, message: Message):
                 f"Reason: ```{AFK_REASON.upper()}```\n"
                 f"See you after I'm done doing whatever I'm doing.`"
             )
-            await Annabelle.send_message(
+            await bot.send_message(
                 chat_id=GetChatID(message),
                 text=text,
                 reply_to_message_id=ReplyCheck(message),
@@ -54,7 +54,7 @@ async def collect_afk_messages(_, message: Message):
                     f"I'll get to you when I get to you.\n"
                     f"No more auto messages for you`"
                 )
-                await Annabelle.send_message(
+                await bot.send_message(
                     chat_id=GetChatID(message),
                     text=text,
                     reply_to_message_id=ReplyCheck(message),
@@ -68,7 +68,7 @@ async def collect_afk_messages(_, message: Message):
                     f"Still busy: ```{AFK_REASON.upper()}```\n"
                     f"Try pinging a bit later.`"
                 )
-                await Annabelle.send_message(
+                await bot.send_message(
                     chat_id=GetChatID(message),
                     text=text,
                     reply_to_message_id=ReplyCheck(message),
