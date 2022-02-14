@@ -8,7 +8,7 @@ CODE BY : [SAMINSUMESH](PAULWALKER_TG)
 from pyrogram import Client as Annabelle
 from pyrogram import filters
 from pyrogram.types import Message
-
+from config import HNADLER
 
 the_regex = r"^r\/([^\s\/])+"
 
@@ -16,8 +16,8 @@ f = filters.chat([])
 
 
 @Annabelle.on_message(f)
-async def auto_read(_, message: Message):
-    await Annabelle.read_history(message.chat.id)
+async def auto_read(bot, message: Message):
+    await bot.read_history(message.chat.id)
     message.continue_propagation()
 
 
