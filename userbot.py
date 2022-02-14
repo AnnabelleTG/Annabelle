@@ -1,4 +1,4 @@
-https://github.com/vaishnavoffic
+# https://github.com/vaishnavoffic
 from pyrogram import Client
 from config import SESSION_STRING, API_iD , API_HASH
 
