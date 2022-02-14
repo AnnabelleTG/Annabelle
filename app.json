@@ -1,0 +1,54 @@
+{
+    "name": "Annabelle UserBot",
+    "description": "A powerful userbot fully running in pyrogram .",
+    "keywords": [
+        "Telegram",
+        "Userbot",
+        "Heroku",
+        "PyrogramUserBot"
+    ],
+    "repository": "https://github.com/AnnabelleTG/Annabelle",
+    "website": "https://t.me/AnnabelleUB",
+    "success_url": "https://github.com/AnnabelleTG/Annabelle",
+    "env": {
+        "API_ID": {
+            "description": "API_ID from website or bot",
+            "required": "True"
+        },
+        "API_HASH": {
+            "description": "You can get this from @s4h_api_idbot",
+            "required": "True"
+        },
+        "SESSION_STRING": {
+            "description": "Your telegram session must be pyrogram session use @Pyrogram_String_Bot",
+            "required": "True"
+        },
+        "DATABASE_NAME": {
+            "description": "Create a database from mongodb.com",
+            "required": "True"
+        },
+        "DATABASE_URL": {
+            "description": "Mongodb database url",
+            "required": "True"
+        },
+        "HANDLER": {
+            "description": "You can set your prefix",
+            "required": "True"
+        },
+        "SUDO_USERS": {
+            "description": "ID of users who can use your bot's certain other than you",
+            "required": "True"
+        },
+        "MY_ID": {
+            "description": "Your telegram id",
+            "required": "True"
+        }
+    },
+    "stack": "heroku-20",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
