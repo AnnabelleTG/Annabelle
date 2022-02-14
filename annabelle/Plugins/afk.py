@@ -1,8 +1,8 @@
 import asyncio
 from datetime import datetime
 import humanize
-from pyrogram import Client as Annabelle
 from pyrogram import filters
+from userbot import Annabelle
 from pyrogram.types import Message
 from config import HNADLER
 from annabelle.helper_funcs.PyroHelp import GetChatID, ReplyCheck
