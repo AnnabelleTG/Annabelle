@@ -28,4 +28,4 @@ clear
 echo -e "${white}[ ${red}* ${white}] ${cyan} Starting Annabelle !"
 
 python ./Annabelle/bot.py &
-python ./Annabelle/userbot.py &
+python ./Annabelle/annabelle/userbot.py &
