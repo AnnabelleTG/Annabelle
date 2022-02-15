@@ -10,6 +10,7 @@ from pyrogram.types.messages_and_media import Message
 async def github(bot:Annabelle, msg:Message) :
     if msg.from_user.id == MY_ID :
         query = msg.text.replace("?github ", "")
+        await msg.edit("`searching github...`")
         try :
             get_url = f"https://api.github.com/search/users?q={query}"
             request1 = requests.get(get_url)
@@ -22,7 +23,7 @@ async def github(bot:Annabelle, msg:Message) :
             await msg.edit_text(text=f"""<p> **__Stdout__**
 **Query** : `{query}`
 
-**ID** : `{json_data["id"]}`
+**ID** : `{data["id"]}`
 **Url** : <a href="{url}"> ʟɪɴᴋ </a>
 **Type** : `{data["type"]}`
 **Name** : `{data["name"]}`
@@ -31,6 +32,8 @@ async def github(bot:Annabelle, msg:Message) :
 **Following** : `{data["following"]}`
 **Followers** : `{data["followers"]}`
 **Email** : `{data["email"]}`
+
+**ANABELLE USERBOT**
 """)
         except :
             await msg.edit_text(text=f"**Couldnt find results for** `{query}`")
