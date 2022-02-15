@@ -12,12 +12,14 @@ Written in python based on pyrogram</i>
   • Funs<br>
   • Private usage</b><br>
   <h3>disclaimer</h3>
-  <code>Copyright @AnnabelleTG
-  This repository and its files belongs to AnnabelleTG.<br> Usage of any files in this repo will be prosecuted.
-    <br>Only owners have the permission to kang the repo<br>
-  If you see a cloned repo(excluding forks) of our repo, please report that to us</code> 
+ 
+  ```Copyright @AnnabelleTG
+  This repository and its files belongs to AnnabelleTG. Usage of any files in this repo will be prosecuted.
+  Only owners have the permission to kang the repo
+  If you see a cloned repo(excluding forks) of our repo, please report that to us
+```
   
-  <h2>Deploy</h2>
+  <h2>Deployment</h2>
   <b>Help for deploying the userbot</b><br>
   <br>
   <code>
