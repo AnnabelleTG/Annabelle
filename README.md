@@ -10,7 +10,7 @@ Written in python based on pyrogram</i>
 <p>Annabelle is telegram's lightest, fastest and most secure userbot.<br> Annabelle is filled with<br>
   <b>• Admin tools<br>
   • Funs<br>
-  • Private usage</b><br>
+  • Private tools</b><br>
   <h3>disclaimer</h3>
  
   ```Copyright @AnnabelleTG
@@ -30,4 +30,10 @@ Written in python based on pyrogram</i>
   <code>DATABASE_URL</code><b>:</b> Your MONGODB url<br>
   <code>HANDLER</code><b>:</b> The command prefix. eg . , <br>
   <code>SUDO_USERS</code><b>:</b> ID of users who can use your bot's certain other than you<br>
-  <code>MY_ID</code><b>:</b> Your telegram ID
+  <code>MY_ID</code><b>:</b> Your telegram ID<br>
+  <h2>Thanks and Credits</h2>
+  <b>Thanks to <a href="https://t.me/jisin_idk">Jisin</a> for his help<br>
+  Thanks to <a href="https://t.me/jithumon">Jithumon</a><br>
+  Thanks to  the whole <a href="https://t.me/dorasupportteam">Dora support team</a><br>
+  Thanks to our buddy <a href="https://t.me/joel_boban">Joel boban</a> and <a href="https://t.me/blesson_3">Blesson</a><br>
+  Thanks to <a href="https://github.com/usergeteam/userge">Userge</a> for being our inspiration</b>
