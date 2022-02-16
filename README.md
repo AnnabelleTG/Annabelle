@@ -31,6 +31,18 @@ Written in python based on pyrogram</i>
   <code>HANDLER</code><b>:</b> The command prefix. eg . , <br>
   <code>SUDO_USERS</code><b>:</b> ID of users who can use your bot's certain other than you<br>
   <code>MY_ID</code><b>:</b> Your telegram ID<br>
+  
+  <h2>Configuration</h2>
+  There are two types of clients in our repo. Bot and userbot.<br>
+  For importing client use this:<br>
+  
+  ```
+  from userbot import Annabelle
+  #for importing userbot
+  
+  from bot import mainbot
+  #for importing bot
+  ```
   <h2>Thanks and Credits</h2>
   <b>Thanks to <a href="https://t.me/jisin_idk">Jisin</a> for his help<br>
   Thanks to <a href="https://t.me/jithumon">Jithumon</a><br>
