@@ -6,7 +6,7 @@ mainbot = Client(
   api_hash = API_HASH,
   bot_token = BOT_TOKEN,
   session_name = "Annabelle-userbot")
-)
+
 
 print("MAinbot has started!")
 mainbot.run()

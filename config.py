@@ -10,4 +10,5 @@ HANDLER = environ.get['HANDLER']
 MY_ID = int(environ.get['MY_ID'])
 DATABASE_NAME = str(environ.get['DATABASE_NAME'])
 DATABASE_URL = environ.get['DATABASE_URL']
+CHANNEL_ID = int(environ.get['CHANNEL_ID'])
 CMD_HELP = {}

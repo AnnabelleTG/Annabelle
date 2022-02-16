@@ -26,3 +26,4 @@ youtube_dl
 qrcode[pil]
 opencv-python
 humanize
+pytz
