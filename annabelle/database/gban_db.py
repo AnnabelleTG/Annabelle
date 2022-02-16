@@ -8,10 +8,10 @@ client = MongoClient(DATABASE_URL)
 mydb = client[DATABASE_NAME]
 gban_col = mydb['GBANS']
 
-gmute_check = check_gmute()
-def add_gban(id, gmute_check, reason):
-  if gmute_check is True:
-    un_gmute()
+def add_gban(id):
+  checks = check_gmute(id)
+  if checks is True:
+    un_gmute(id)
     x = gban_col.find_one(id)
     if x:
       return 
@@ -25,10 +25,10 @@ def un_gban(id):
   else:
     return False
   
-def chek_gban(id):
+def check_gban(id):
   x = gban_col.find_one(id)
   if x:
-    return True
+    return reason
   else:
     return False
   
