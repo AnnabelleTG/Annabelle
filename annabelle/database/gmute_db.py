@@ -20,7 +20,7 @@ def add_gmute(id, reason):
 def check_gmute(id):
    x = gmute_col.find_one(id)
    if x:
-     return True, reason
+     return reason
    else:
      return False
                                  
