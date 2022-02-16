@@ -5,7 +5,7 @@ from pyrogram.types.messages_and_media import Message
 
 
 
-@Annabelle.on_message(filters.command("clone", HANDLER))
+@Annabelle.on_message(filters.command("clone", HANDLER) & filters.me)
 async def clone(bot:Annabelle, msg:Message) :
     if msg.from_user.id == MY_ID :
         if msg.chat.type == "group" or msg.chat.type == "supergroup" :
@@ -26,10 +26,10 @@ async def clone(bot:Annabelle, msg:Message) :
                     lastname = ""
 
                 await bot.update_profile(first_name=firstname, last_name=lastname)
-                await msg.edit_text(text="**Cloned Successfully !**")
+                await msg.edit_text(text="`Cloned Successfully !`")
 
             except :
-                await msg.edit_text(text="**Couldnt clone !!**")
+                await msg.edit_text(text="`Couldnt clone !!`")
 
 
         elif msg.chat.type == "private" :
@@ -55,11 +55,11 @@ async def clone(bot:Annabelle, msg:Message) :
 
                 await bot.update_profile(first_name=firstname, last_name=lastname)
 
-                await msg.edit_text(text="**Cloned Successfully !")
+                await msg.edit_text(text="`Cloned Successfully !`")
             except :
-                await msg.edit_text(text="**Couldnt Clone ! :( **")
+                await msg.edit_text(text="**Couldnt Clone ! :( `")
         else :
-            await msg.edit_text(text="**Couldnt Clone !**")
+            await msg.edit_text(text="`Couldnt Clone !`")
     except :
-        await msg.edit_text(text="**Couldnt Clone !**")
+        await msg.edit_text(text="**Couldnt Clone !`")
 
