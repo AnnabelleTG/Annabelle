@@ -60,6 +60,4 @@ async def clone(bot:Annabelle, msg:Message) :
                 await msg.edit_text(text="**Couldnt Clone ! :( `")
         else :
             await msg.edit_text(text="`Couldnt Clone !`")
-    except :
-        await msg.edit_text(text="**Couldnt Clone !`")
 
