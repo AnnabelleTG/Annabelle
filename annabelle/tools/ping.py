@@ -1,12 +1,13 @@
 import time
+from pyrogram import Client
 from config import MY_ID, HANDLER
 from pyrogram import filters as vrn
-from userbot import Annabelle
+from ..userbot import Annabelle
 from pyrogram.types.messages_and_media import Message
 
 
-@Annabelle.on_message(vrn.command("ping", HANDLER) & vrn.group)
-async def ping(bot:Annabelle,msg:Message):
+@Annabelle.on_message(vrn.command("ping", HANDLER))
+async def ping(bot:Client,msg:Message):
     if msg.from_user.id == MY_ID :
         start = time.time()
         await msg.edit_text(text="**Ping ...")

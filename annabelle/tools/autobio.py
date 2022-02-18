@@ -17,7 +17,7 @@ async def autobio(bot:Annabelle, msg:Message) :
         while value is "true" :
             await asyncio.sleep(60)
             hour = datetime.datetime.now(pytz.timezone("Asia/Kolkata")).hour
-            minute = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+            minute = datetime.datetime.now(pytz.timezone("Asia/Kolkata")).minute
             await bot.update_profile(bio=f"H : {hour} , M : {minute}")
 
     elif args == "false" :

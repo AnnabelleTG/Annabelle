@@ -1,4 +1,5 @@
 from userbot import Annabelle
+from pyrogram import Client
 from config import MY_ID, HANDLER
 from pyrogram import filters as vrn
 from pyrogram.types.messages_and_media import Message
@@ -6,7 +7,7 @@ from pyrogram.types.messages_and_media import Message
 
 
 @Annabelle.on_message(filters.command("clone", HANDLER) & filters.me)
-async def clone(bot:Annabelle, msg:Message) :
+async def clone(bot:Client, msg:Message) :
     if msg.from_user.id == MY_ID :
         if msg.chat.type == "group" or msg.chat.type == "supergroup" :
             try :

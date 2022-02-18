@@ -19,7 +19,7 @@ async def github(bot:Annabelle, msg:Message) :
               json_data = request1.json()
               raw_data = json_data["items"]
               data_ = raw_data[0]
-              url = data_["url"]
+              url = data_["html_url"]
               request2 = requests.get(url)
               data = request2.json()
               await msg.edit_text(text=f"""<p> **__Stdout__**
