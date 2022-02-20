@@ -56,9 +56,9 @@ async def clone(bot:Client, msg:Message) :
 
                 await bot.update_profile(first_name=firstname, last_name=lastname)
 
-                await msg.edit_text(text="`Cloned Successfully !`")
+                await msg.edit_text(text="**Cloned Successfully !**")
             except :
-                await msg.edit_text(text="**Couldnt Clone ! :( `")
+                await msg.edit_text(text="**Couldnt Clone !**")
         else :
-            await msg.edit_text(text="`Couldnt Clone !`")
+            await msg.edit_text(text=**Couldnt Clone !**")
 
