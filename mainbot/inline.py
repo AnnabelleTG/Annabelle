@@ -6,6 +6,18 @@ from pyrogram.types import (
 )
 from bot import mainbot
 
+@mainbot.on_callback_query(filters.regex("tools"))
+async def calltools(query, message):
+  await query.message.edit(
+    text = "**TOOLS**\n Here are the plugins available in tools category",
+    reply_markup = InlineKeyboardMarkup([
+      [InlineKeyboardButton("Thumbnail", callback_data="ytthumb"), InlineKeyboardButton("Github search", callback_data="gitsearch")],
+      [InlineKeyboardButton("YT Search", callback_data="ytsearch"), InlineKeyboardButton("purge", callback_data="callpurge")],
+      [InlineKeyboardButton("Create", callback_data="callcreate"), InlineKeyboardButton("Auto pic", callback_data="callautodp")],
+      [InlineKeyboardButton("Auto bio", callback_data="callautobio"), InlineKeyboardButton("Covid", callback_data="callcovid")]
+    ])
+  )
+
 @mainbot.on_inline_query()
 async def inline_query(bot:mainbot, iq:InlineQuery):
   result[]
