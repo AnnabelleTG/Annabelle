@@ -10,7 +10,7 @@ from pyrogram.types.messages_and_media import Message
 async def ping(bot:Client,msg:Message):
     if msg.from_user.id == MY_ID :
         start = time.time()
-        await msg.edit_text(text="**Ping ...")
+        await msg.edit_text(text="**Ping ...**")
         stop = time.time()
         delay_time = ( stop - start ) * 1000
         ms = str(delay_time).split(".")[0]
