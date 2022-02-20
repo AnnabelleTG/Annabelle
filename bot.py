@@ -8,5 +8,5 @@ mainbot = Client(
   session_name = "Annabelle-userbot")
 
 
-print("MAinbot has started!")
+print("Mainbot has started!")
 mainbot.run()
