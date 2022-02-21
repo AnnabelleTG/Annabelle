@@ -19,4 +19,4 @@ def hack(Annabelle, message):
     asyncio.sleep(1)
     message.edit("`cracking user password`")
     asyncio.sleep(1)
-    message.edit(f"`hacking finished. Pay $80 to {message.from_user.mention} to attain back your info`")
+    message.edit("Get the hacked data from our database [Annabelle Hack Logs](https://t.me/annabelleubhacks)
