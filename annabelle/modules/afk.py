@@ -31,7 +31,7 @@ async def afk(client: Client, message):
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)
 async def unafk(client: Client, message):
 	try:
-		global start, end
+	    global start, end
             end = datetime.datetime.now().replace(microsecond=0)
             afk_dur = end - start
             await message.edit(f"I'm not AFK any more. I was AFK {afk_dur}")
