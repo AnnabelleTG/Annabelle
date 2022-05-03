@@ -35,6 +35,7 @@ async def unafk(client: Client, message):
             end = datetime.datetime.now().replace(microsecond=0)
             afk_dur = end - start
             await message.edit(f"I'm not AFK any more. I was AFK {afk_dur}")
+            client.remove_handler(*handler)
       except NameError:
       	await message.edit("You aren't AFK Now")
       	await asyncio.sleep(3)
