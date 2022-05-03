@@ -1,8 +1,7 @@
 import ytthumb
-from pyrogram import filters as vrn
-from annabelle.commands import Annabelle
+from pyrogram import Client, filters as vrn
 
-@Annabelle.on_message(vrn.command('thumb', HANDLER))
+@Client.on_message(vrn.command('thumb', HANDLER))
 async def thumb(Annabelle, message):
     try:
         args = message.text.split(None, 1)      
