@@ -13,6 +13,7 @@ from pyrogram.handlers import (
 	)
 from config import HANDLER
 from annabelle.modules.helpers.afk_helpers import afk_handler
+from annabelle.modules.helpmenu.help_menu import modules_help
 
 @Client.on_message(filters.command("afk", prefixes=f"{HANDLER}") & filters.me)
 async def afk(client: Client, message):
