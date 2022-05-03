@@ -1,8 +1,8 @@
 import ytthumb
 from pyrogram import Client, filters as vrn
 
-@Client.on_message(vrn.command('thumb', HANDLER))
-async def thumb(Annabelle, message):
+@Client.on_message(vrn.command('thumb', prefixes=f"{HANDLER}) & filter.me)
+async def thumb(Client, message):
     try:
         args = message.text.split(None, 1)      
         d=await message.reply("```Processing...```")
