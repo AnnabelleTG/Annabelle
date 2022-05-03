@@ -6,7 +6,7 @@ from config import HANDLER
 from annabelle.modules.helpmenu.help_menu import modules_help
 
 
-@Client.on_message(filters.command(["fwdall"], prefixes=f"{HNDLR}") & filters.me)
+@Client.on_message(filters.command(["fwdall"], prefixes=f"{HANDLER}") & filters.me)
 async def forward(client: Client, message: Message):
     stat = None if len(message.text.split(" ")) < 2 else message.text.split(" ")[1]
     if sta is not None:
