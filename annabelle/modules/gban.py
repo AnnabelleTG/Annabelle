@@ -34,6 +34,6 @@ async def ungban(Annabelle, message):
         id = message.reply_to_message.from_user.id
         x = un_gban(id)
         if x is False:
-            await message.edit("`THat user is not globally banned!`")
+            await message.edit("`That user is not globally banned!`")
         else:
             await message.edit(f"**__{message.reply_to_message.from_user.mention}[{id}]__** has been unbanned")
