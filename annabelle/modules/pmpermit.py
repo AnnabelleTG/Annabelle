@@ -16,9 +16,9 @@ async def addpm(Annabelle, message):
       asyncio.sleep(3)
       await message.delete()
     else:
-      await message.edit("`That user can send pm messeges`")
+      await message.edit("`That user can send pm messages`")
   else:
-    await message.edit("`Reply to that user's messege`")
+    await message.edit("`Reply to that user's message`")
     
 @Annabelle.on_message(filters.command('una', HANDLER) & filters.me)
 async def delpm(Annabelle, message):
@@ -28,7 +28,7 @@ async def delpm(Annabelle, message):
     if x is False:
       await message.edit("`That user was not even approved`")
     else:
-      await message.edit("`That user is approved to pm you`")
+      await message.edit("`That user is unapproved to pm you`")
   else:
     await message.edit("`Reply to that user's message`")
     
