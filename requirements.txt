@@ -8,7 +8,7 @@ pip-chill
 psutil
 ptable
 pymongo
-pyrogram
+git+https://github.com/subinps/pyrogram.git@session
 python-dotenv
 python-git
 requests-async
@@ -27,3 +27,7 @@ qrcode[pil]
 opencv-python
 humanize
 pytz
+wikipedia
+wget
+requests
+asyncio
