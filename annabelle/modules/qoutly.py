@@ -7,7 +7,7 @@ from config import HANDLER
 from annabelle.modules.helpmenu.help_menu import modules_help
 
 
-@Client.on_message(filters.command(["q", "quote"], prefixes=f"{HNDLR}") & filters.me)
+@Client.on_message(filters.command(["q", "quote"], prefixes=f"{HANDLER}") & filters.me)
 async def quote_cmd(client: Client, message: types.Message):
     if not message.reply_to_message:
         return await message.edit("<b>Specify message(s) for quote</b>")
@@ -77,7 +77,7 @@ async def quote_cmd(client: Client, message: types.Message):
 
 
 @Client.on_message(
-    filters.command(["fq", "fakequote"], prefixes=f"{HNDLR}") & filters.me
+    filters.command(["fq", "fakequote"], prefixes=f"{HANDLER}") & filters.me
 )
 async def fake_quote_cmd(client: Client, message: types.Message):
     if not message.reply_to_message:
