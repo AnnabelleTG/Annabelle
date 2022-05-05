@@ -9,8 +9,7 @@ class Annabelle(Client):
             SESSION_STRING,
             api_id=API_ID,
             api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
-            plugins=dict{"root": "annabelle/modules"},
+            plugins={"root": "annabelle/modules"},
         )
 
     async def start(self):
