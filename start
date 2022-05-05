@@ -34,7 +34,7 @@ if [ ${choice^} == "Y" ] ; then
   echo -e "${white}[ ${red}* ${white}] ${cyan} Starting Annabelle !"
 
   python ./Annabelle/bot.py &
-  python ./Annabelle/annabelle/userbot.py &
+  python ./Annabelle/annabelle.py &
 
 elif [ ${choice^} == "N" ] ; then
   echo "${cyan} Please consider editing values in config.py and try again ! ${reset}"
