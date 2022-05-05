@@ -12,7 +12,7 @@ async def calltools(query, message):
     text = "**TOOLS**\n Here are the plugins available in tools category",
     reply_markup = InlineKeyboardMarkup([
       [InlineKeyboardButton("Thumbnail", callback_data="ytthumb"), InlineKeyboardButton("Github search", callback_data="gitsearch")],
-      [InlineKeyboardButton("YT Search", callback_data="ytsearch"), InlineKeyboardButton("purge", callback_data="callpurge")],
+      [InlineKeyboardButton("YT Search", callback_data="ytsearch"), InlineKeyboardButton("Purge", callback_data="callpurge")],
       [InlineKeyboardButton("Create", callback_data="callcreate"), InlineKeyboardButton("Auto pic", callback_data="callautodp")],
       [InlineKeyboardButton("Auto bio", callback_data="callautobio"), InlineKeyboardButton("Covid", callback_data="callcovid")]
     ])
