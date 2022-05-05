@@ -9,7 +9,7 @@ import logging
 async def start(mainbot, message):
   await message.reply_photo(
     photo = {},
-    caption = f"Heya {message.from_user}, I am a powerfull userbot for [this person](t.me/user?id={MY_ID}). The messages you send here will be forwarded to my master",
+    caption = f"Heya {message.from_user}, I am a powerfull userbot of [this person](t.me/user?id={MY_ID}). The messages you send here will be forwarded to my master",
     reply_markup = InlineKeyboardMarkup([
       [InlineKeyboardMarkup("Deploy your own bot", url="https://github.com/vaishnavofficial/annabelle")],
       [InlineKeyboardButton("Support Channel", url="t.me/XD_Botz"), InlineKeyboardButton("Group", url="t.me/vrn_group")]
