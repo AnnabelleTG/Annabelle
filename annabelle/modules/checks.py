@@ -1,4 +1,4 @@
-from userbot import Annabelle
+from annabelle import Annabelle 
 from annabelle.database.gbans import check_gban
 from annabelle.database.gmutes import check_gmute
 from config import MY_ID
