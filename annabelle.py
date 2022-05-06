@@ -34,5 +34,5 @@ class Annabelle(Client):
         logging.info("Anabelle stopped!")
 
 
-app = Anabelle()
+app = Annabelle()
 app.run()
