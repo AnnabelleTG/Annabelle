@@ -1,7 +1,7 @@
 import pytz
 import asyncio
 import datetime
-from ..userbot import Annabelle
+from annabelle import Annabelle 
 from pyrogram import filters as vrn
 from config import MY_ID, HANDLER
 from pyrogram.types.messages_and_media import Message
