@@ -3,8 +3,7 @@ import requests
 from requests.utils import requote_uri
 from pyrogram import filters as vrn
 from config import HANDLER
-from userbot import Annabelle
-
+from annabelle import Annabelle 
 
 API = "https://api.sumanjay.cf/covid/?country="
 
