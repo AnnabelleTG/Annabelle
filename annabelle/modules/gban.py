@@ -2,7 +2,7 @@ from config import MY_ID, HANDLER, SUDO_USERS
 from pyrogram import filters as vrn
 from annabelle.helper_funcs.admin_check import admin_check
 from annabelle.helper_funcs.strings import GBAN_TXT
-from annabelle.commands import Annabelle
+from annabelle import Annabelle 
 from annabelle.database.gban_db import add_gban, un_gban, check_gban
 
 import logging
