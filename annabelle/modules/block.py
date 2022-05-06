@@ -1,5 +1,5 @@
 # https://github.com/vaishnavofficial/Annabelle
-from userbot import Annabelle
+from annabelle import Annabelle 
 from pyrogram import filters as vrn
 from config import HANDLER
 
