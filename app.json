@@ -19,6 +19,10 @@
             "description": "You can get this from @s4h_api_idbot",
             "required": "True"
         },
+        "BOT_TOKEN": {
+            "description": "Give a Bot token. Get it from @botfather",
+            "required": "True"
+        },
         "SESSION_STRING": {
             "description": "Your telegram session must be pyrogram session use @Pyrogram_String_Bot",
             "required": "True"
