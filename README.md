@@ -37,7 +37,7 @@ Written in python based on pyrogram</i>
   For importing client use this:<br>
   
   ```
-  from userbot import Annabelle
+  from annabelle import Annabelle 
   #for importing userbot
   
   from bot import mainbot
