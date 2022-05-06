@@ -3,9 +3,9 @@ from asyncio import sleep
 from pyrogram import filters
 from config import SUDO_USERS, HANDLER
 from pmpermit_db import check_permit, add_permit, del_permit
-from userbot import Annabelle
-
+from annabelle import Annabelle 
 PM_PERMIT = False
+
 @Annabelle.on_message(filters.command('a', HANDLER) & filters.me)
 async def addpm(Annabelle, message):
   if message.reply_to_message:
