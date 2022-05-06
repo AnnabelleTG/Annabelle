@@ -1,4 +1,4 @@
-from annabelle.commands import Annabelle
+from annabelle import Annabelle 
 from pyrogram import filters as vrn
 
 @Annabelle.on_message(filters.command('pin', '?') & filters.group)
