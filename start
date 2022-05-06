@@ -25,23 +25,6 @@ if [ ! -d "./annabelle" ] ; then
 echo -e "${white}[ ${red}* ${white}] ${cyan} Instaling pip modules !${reset}\n"
 pip install -r ./Annabelle/requirements.txt
 
-  echo "${white}[ ${red}* ${white}] ${cyan} Have you edited the values in config.py ${reset}"
-  read -p "${white} [ y / n ]" choice
-fi
-
-if [ ${choice^} == "Y" ] ; then
-  clear
-  echo -e "${white}[ ${red}* ${white}] ${cyan} Starting Annabelle !"
-
-  python ./Annabelle/bot.py &
-  python ./Annabelle/annabelle.py &
-
-elif [ ${choice^} == "N" ] ; then
-  echo "${cyan} Please consider editing values in config.py and try again ! ${reset}"
-  exit 1
-
-else :
-  echo "${red} Invalid choice !! ${reset}"
-  exit 1
-fi
-
+echo "Starting Annabelle!"
+python3 ./Annabelle/bot.py &
+python3 ./Annabelle/annabelle.py
