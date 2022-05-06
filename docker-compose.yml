@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+   shop:
+    build: .
+    environment:
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      BOT_TOKEN: $BOT_TOKEN
+      DATABASE_URL: $DATABASE_URL
+      HANDLER: $HANDLER
+      DATABASE_NAME: $DATABASE_NAME
+      SESSION_STRING: $SESSION_STRING
+      MY_ID: $MY_ID
+      SUDO_USERS: $SUDO_USERS
