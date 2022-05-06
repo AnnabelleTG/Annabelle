@@ -1,5 +1,5 @@
 import asyncio
-from ..userbot import Annabelle
+from annabelle import Annabelle 
 from pyrogram import filters as vrn
 from config import MY_ID, HANDLER, CHANNEL_ID
 from pyrogram.types.messages_and_media import Message
