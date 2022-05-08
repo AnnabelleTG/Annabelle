@@ -22,5 +22,5 @@ async def frwd(mainbot, message):
     USER_ID = message.from_user.mention
     await mainbot.forward_message(message.from_user.id, MY_ID)
   except:
-    mainbot.send_message(MY_ID, f"{USER_ID} is spamming me! I am not able to forward his messages")
+    await mainbot.send_message(MY_ID, f"{USER_ID} is spamming me! I am not able to forward his messages")
     
