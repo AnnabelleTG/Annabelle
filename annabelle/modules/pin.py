@@ -1,4 +1,5 @@
 from config import HANDLER
+from annabelle import logger
 from annabelle import Annabelle 
 
 from pyrogram import filters
@@ -16,6 +17,9 @@ async def pin(client: Annabelle, message: Message):
         return
     try:
         message.reply_to_message.pin()
+        logger.info(
+            f"I have pinned a message in {message.chat.id}\nMessage link: {message.reply_to_message.link}"
+        )
         await message.edit("<code>Pinned successfully!</code>")
     except ChatAdminRequired:
         await message.reply_text("I am not admin here.")
@@ -34,6 +38,9 @@ async def unpin(client: Annabelle, message: Message):
         return
      try:
         message.reply_to_message.pin()
+        logger.info(
+            f"I have unpinned a message in {message.chat.id}\nMessage link: {message.reply_to_message.link}"
+        )
         await message.edit("<code>Unpinned successfully!</code>")
      except ChatAdminRequired:
          await message.reply_text("I am not admin here.")
