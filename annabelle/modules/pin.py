@@ -38,6 +38,6 @@ async def unpin(client: Annabelle, message: Message):
      except ChatAdminRequired:
          await message.reply_text("I am not admin here.")
      expect RightForbidden:
-         await message.reply_text("I don't have enough rights to pin messages.")
+         await message.reply_text("I don't have enough rights to unpin messages.")
      expect RPCError as error:
          await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
