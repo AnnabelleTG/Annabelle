@@ -1,4 +1,5 @@
 from os import path, mkdir
+from sys import stdout
 from datetime import datetime
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 
