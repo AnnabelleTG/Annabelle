@@ -27,7 +27,7 @@ async def afk(client: Client, message):
                         await message.edit(f"I'm going afk\n**reason**: `{reason}`")
 		else:
 			reason = None
-            await message.edit("I'm going afk")
+                        await message.edit("I'm going afk")
             
             
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)

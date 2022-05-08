@@ -22,4 +22,4 @@ async def autodp(bot:Annabelle, msg:Message) :
         elif value == "false" :
             await msg.edit_text(text="**__Plugin Disabled__** : `autodp`")
         else :
-            await msg.edit_text(text="**__Please enter a boolean insted of blah blah blah__**")
+            await msg.edit_text(text="**__Please enter a boolean instead of blah blah blah__**")
