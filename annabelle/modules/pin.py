@@ -1,26 +1,39 @@
+from config import HANDLER
 from annabelle import Annabelle 
-from pyrogram import filters as vrn
 
-@Annabelle.on_message(filters.command('pin', '?') & filters.group)
-async def pin(Annabelle, message):
-    if not admins:
+from pyrogram import filters
+from pyrogram.types import Message
+from pyrogram.errors import ChatAdminRequired, RPCError
+
+@Annabelle.on_message(filters.command('pin', HANDLER) & filters.group)
+async def pin(client: Annabelle, message: Message):
+    admins = await client.get_chat_member(message.chat.id, message.from_user.id)
+    if not ((admins.status == "administrator") or (admins.status == "creator")):
+        await message.reply_text("**Your not allowed to use this.**")
         return
-    else:
-      try:
-        message_id = message.reply_to_message.message_id
-        await bot.pin_chat_message(message.chat.id, message_id)
+    if not message.reply_to_message:
+        await message.reply_text("**Reply to a message to pin.**")
+        return
+    try:
+        message.reply_to_message.pin()
         await message.edit("<code>Pinned successfully!</code>")
-      except:
-        await message.edit("Reply to the message you want to pin")
-
-@Annabelle.on_message(vrn.command('unpin', '?'))
-async def unpin(Annabelle, message):
-    if not admins:
+    except ChatAdminRequired:
+        await message.reply_text("I am not admin here.")
+    expect RPCError as error:
+        await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
+        
+@Annabelle.on_message(filters.command('unpin', HANDLER))
+async def unpin(client: Annabelle, message: Message):
+    if not ((admins.status == "administrator") or (admins.status == "creator")):
+        await message.reply_text("**Your not allowed to use this.**")
         return
-    else:
+    if not message.reply_to_message:
+        await message.reply_text("**Reply to a message to pin.**")
+        return
      try:
-        message_id = message.reply_to_message.message_id
-        await bot.unpin_chat_message(message.chat.id, message_id)
+        message.reply_to_message.pin()
         await message.edit("<code>Unpinned successfully!</code>")
-     except:
-        await message.edit("Reply to the message you want to unpin")
+     except ChatAdminRequired:
+         await message.reply_text("I am not admin here.")
+     expect RPCError as error:
+         await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
