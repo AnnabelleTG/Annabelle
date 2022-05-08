@@ -22,12 +22,12 @@ async def afk(client: Client, message):
 	handler = await client.add_handler(
 		MessageHandler(afk_handler, (filters.private & ~filters.me))
 		)
-		if len(message.text.split()) >= 2:
-			reason = message.text.split("", maxsplit=1)[1]
-                        await message.edit(f"I'm going afk\n**reason**: `{reason}`")
-		else:
-			reason = None
-                        await message.edit("I'm going afk")
+        if len(message.text.split()) >= 2:
+		reason = message.text.split("", maxsplit=1)[1]
+                await message.edit(f"I'm going afk\n**reason**: `{reason}`")
+	else:
+	        reason = None
+                await message.edit("I'm going afk")
             
             
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)
