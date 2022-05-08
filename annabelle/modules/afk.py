@@ -19,15 +19,13 @@ from annabelle.modules.helpmenu.help_menu import modules_help
 async def afk(client: Client, message):
 	global start, end, handler, reason
 	start = datetime.datetime.now().replace(microsecond=0)
-	handler = await client.add_handler(
-		MessageHandler(afk_handler, (filters.private & ~filters.me))
-		)
+	handler = await client.add_handler(MessageHandler(afk_handler, (filters.private & ~filters.me)))
         if len(message.text.split()) >= 2:
-		reason = message.text.split("", maxsplit=1)[1]
-                await message.edit(f"I'm going afk\n**reason**: `{reason}`")
+            reason = message.text.split("", maxsplit=1)[1]
+            await message.edit(f"I'm going afk\n**reason**: `{reason}`")
 	else:
-	        reason = None
-                await message.edit("I'm going afk")
+	    reason = None
+            await message.edit("I'm going afk")
             
             
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)
