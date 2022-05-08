@@ -21,7 +21,7 @@ async def pin(client: Annabelle, message: Message):
         await message.reply_text("I am not admin here.")
     expect RightForbidden:
         await message.reply_text("I don't have enough rights to pin messages.")
-    expect RPCError as error:
+    expect RPCError as e:
         await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
         
 @Annabelle.on_message(filters.command('unpin', HANDLER))
