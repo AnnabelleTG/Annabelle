@@ -12,7 +12,7 @@ file_handler = FileHandler(filename=LOGFILE)
 stdout_handler = StreamHandler(stdout)
 
 basicConfig(
-    format="%(asctime)s - [Alita_Robot] - %(levelname)s - %(message)s",
+    format="%(asctime)s - [Annabelle] - %(levelname)s - %(message)s",
     level=INFO,
     handlers=[file_handler, stdout_handler],
 )
