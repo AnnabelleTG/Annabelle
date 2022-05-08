@@ -23,10 +23,10 @@ async def pin(client: Annabelle, message: Message):
         await message.edit("<code>Pinned successfully!</code>")
     except ChatAdminRequired:
         await message.reply_text("I am not admin here.")
-    expect RightForbidden:
-        await message.reply_text("I don't have enough rights to pin messages.")
-    expect RPCError as e:
-        await message.reply_text(f"Some error occurred\n\n*Error:*\n{e}")
+    #expect RightForbidden:
+        #await message.reply_text("I don't have enough rights to pin messages.")
+    #expect RPCError as e:
+        #await message.reply_text(f"Some error occurred\n\n*Error:*\n{e}")
         
 @Annabelle.on_message(filters.command('unpin', HANDLER))
 async def unpin(client: Annabelle, message: Message):
@@ -44,7 +44,7 @@ async def unpin(client: Annabelle, message: Message):
         await message.edit("<code>Unpinned successfully!</code>")
      except ChatAdminRequired:
          await message.reply_text("I am not admin here.")
-     expect RightForbidden:
-         await message.reply_text("I don't have enough rights to unpin messages.")
-     expect RPCError as error:
-         await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
+     #expect RightForbidden:
+         #await message.reply_text("I don't have enough rights to unpin messages.")
+     #expect RPCError as error:
+         #await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
