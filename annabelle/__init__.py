@@ -1,4 +1,4 @@
-from os import path
+from os import path, mkdir
 from datetime import datetime
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 
