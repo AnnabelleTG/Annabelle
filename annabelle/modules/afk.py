@@ -22,12 +22,10 @@ async def afk(client: Client, message):
 	handler = await client.add_handler(
 		MessageHandler(afk_handler, (filters.private & ~filters.me))
 		)
-        if len(message.text.split()) >= 2:
-		reason = message.text.split("", maxsplit=1)[1]
+        if len(message.command) > 1:
+		reason = message.text.split(" ", maxsplit=1)[1]
                 await message.edit(f"I'm going afk\n**reason**: `{reason}`")
-	else:
-	        reason = None
-                await message.edit("I'm going afk")
+	await message.edit("I'm going afk")
             
             
 @Client.on_message(filters.command("unafk", prefixes=f"{HANDLER}") & filters.me)
@@ -38,10 +36,10 @@ async def unafk(client: Client, message):
             afk_dur = end - start
             await message.edit(f"I'm not AFK any more. I was AFK {afk_dur}")
             client.remove_handler(*handler)
-      except NameError:
-      	await message.edit("You aren't AFK Now")
-      	await asyncio.sleep(3)
-      	await message.delete()
+        except NameError:
+            await message.edit("You aren't AFK Now")
+            await asyncio.sleep(3)
+            await message.delete()
       	
 modules_help.append(
     {"afk": [{"afk [reason]": "Go to afk"}, {"unafk": "Get out of AFK"}]}
