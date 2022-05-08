@@ -3,7 +3,7 @@ from annabelle import Annabelle
 
 from pyrogram import filters
 from pyrogram.types import Message
-from pyrogram.errors import ChatAdminRequired, RPCError
+from pyrogram.errors import ChatAdminRequired, RightForbidden, RPCError
 
 @Annabelle.on_message(filters.command('pin', HANDLER) & filters.group)
 async def pin(client: Annabelle, message: Message):
@@ -19,6 +19,8 @@ async def pin(client: Annabelle, message: Message):
         await message.edit("<code>Pinned successfully!</code>")
     except ChatAdminRequired:
         await message.reply_text("I am not admin here.")
+    expect RightForbidden:
+        await message.reply_text("I don't have enough rights to pin messages.")
     expect RPCError as error:
         await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
         
@@ -35,5 +37,7 @@ async def unpin(client: Annabelle, message: Message):
         await message.edit("<code>Unpinned successfully!</code>")
      except ChatAdminRequired:
          await message.reply_text("I am not admin here.")
+     expect RightForbidden:
+         await message.reply_text("I don't have enough rights to pin messages.")
      expect RPCError as error:
          await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
