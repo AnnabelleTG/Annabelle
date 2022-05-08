@@ -19,7 +19,7 @@ from annabelle.modules.helpmenu.help_menu import modules_help
 async def afk_rish(client, message):
 	global handler, start, end, reason
 	start = datetime.datetime.now().replace(ms=0)
-	handler=await client.add_handler(MessageHanlder(filters.me))
+	handler=await client.add_handler(MessageHanlder(afk_handler, filters.me))
 	if len(message.text.split()) >= 2:
 		reason = message.text.split("", maxsplit=1)[1]
 		await message.edit("I'm on a misson {reason}")
