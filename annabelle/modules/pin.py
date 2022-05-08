@@ -1,7 +1,9 @@
 from config import HANDLER
-from pyrogram import filters
 from annabelle import Annabelle 
+
+from pyrogram import filters
 from pyrogram.types import Message
+from pyrogram.errors import ChatAdminRequired, RPCError
 
 @Annabelle.on_message(filters.command('pin', HANDLER) & filters.group)
 async def pin(client: Annabelle, message: Message):
@@ -9,21 +11,29 @@ async def pin(client: Annabelle, message: Message):
     if not ((admins.status == "administrator") or (admins.status == "creator")):
         await message.reply_text("**Your not allowed to use this.**")
         return
+    if not message.reply_to_message:
+        await message.reply_text("**Reply to a message to pin.**")
+        return
     try:
-        message_id = message.reply_to_message.message_id
-        await bot.pin_chat_message(message.chat.id, message_id)
+        message.reply_to_message.pin()
         await message.edit("<code>Pinned successfully!</code>")
-    except:
-        await message.edit("Reply to the message you want to pin")
-
+    except ChatAdminRequired:
+        await message.reply_text("I am not admin here.")
+    expect RPCError as error:
+        await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
+        
 @Annabelle.on_message(filters.command('unpin', HANDLER))
 async def unpin(client: Annabelle, message: Message):
     if not ((admins.status == "administrator") or (admins.status == "creator")):
         await message.reply_text("**Your not allowed to use this.**")
         return
+    if not message.reply_to_message:
+        await message.reply_text("**Reply to a message to pin.**")
+        return
      try:
-        message_id = message.reply_to_message.message_id
-        await bot.unpin_chat_message(message.chat.id, message_id)
+        message.reply_to_message.pin()
         await message.edit("<code>Unpinned successfully!</code>")
-     except:
-        await message.edit("Reply to the message you want to unpin")
+     except ChatAdminRequired:
+         await message.reply_text("I am not admin here.")
+     expect RPCError as error:
+         await message.reply_text(f"Some error occurred\n\n*Error:*\n{error}")
