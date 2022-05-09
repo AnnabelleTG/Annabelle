@@ -2,6 +2,7 @@ from os import path, mkdir
 from sys import stdout
 from datetime import datetime
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
+from annabelle import Annabelle
 
 LOG_DATETIME = datetime.now().strftime("%d_%m_%Y-%H_%M_%S")
 LOGDIR = f"{__name__}/logs"
@@ -22,3 +23,8 @@ basicConfig(
 
 getLogger("pyrogram").setLevel(WARNING)
 logger = getLogger(__name__)
+
+
+
+app = Annabelle()
+app.run()
