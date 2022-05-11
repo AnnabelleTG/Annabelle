@@ -32,7 +32,3 @@ class Annabelle(Client):
     async def stop(self, *args):
         await super().stop()
         logging.info("Anabelle stopped!")
-
-
-app = Annabelle()
-app.run()
